@@ -1,0 +1,439 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เที่ยวบ้านฉัน ตำบลบ้านค้อ</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- import fontawesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 
+      *** สร้างเมนู ***
+     -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">เที่ยวบ้านฉัน ตำบลบ้านค้อ</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbar1" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a href="#info" class="nav-link">ตำบลบ้านค้อ</a>
+            </li>
+            <li class="nav-item">
+              <a href="#product" class="nav-link">สถานที่ท่องเที่ยว</a>
+            </li>
+            <li class="nav-item">
+              <a href="#attraction" class="nav-link">ที่พัก</a>
+            </li>
+            <li class="nav-item">
+              <a href="#hostel" class="nav-link">สินค้า</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+                >เข้าสู่ระบบ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 
+      *** สร้าง Slider ***
+     -->
+    <section id="slider">
+      <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+        <!-- ปุ่ม slider -->
+        <ol class="carousel-indicators">
+          <button
+            data-bs-target="#mySlider"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+          <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-image-1 active">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block">
+                <h1 class="display-3">ประเพณีวันสงกรานต์</h1>
+                <p>
+                  การสรงน้ำพระ คือ การทำความสะอาดพระพุทธรูป หิ้งพระ รูปภาพ
+                  และสิ่งของต่าง ๆ
+                  รวมไปถึงที่ประดิษฐานขององค์พระพุทธรูปให้สะอาดบริสุทธิ์
+                  หรือเรียกอีกอย่างว่า “การถวายเครื่องเถราภิเษก”
+                  ซึ่งเป็นพิธีกรรมที่มีมาตั้งแต่สมัยพุทธกาลและสืบเนื่องต่อมาจนถึงปัจจุบันและต้องทำเป็นประจำทุกปี
+                  ถือว่าเป็นการชำระพระวรกายของพระพุทธเจ้าให้ปราศจากมลทิน
+                  เพื่อให้เกิดมุทิตาจิต เบิกบานใจ สุขใจ
+                  และเกิดความเป็นสิริมงคลกับผู้ที่ปฏิบัติและทุกคนในบ้าน
+                  นอกจากนี้ยังเป็นการแสดงถึงความเคารพและเลื่อมใสศรัทธาต่อพระรัตนตรัยทั้ง
+                  3 ประการอีกด้วย
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image-2">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block">
+                <h1 class="display-3">ประเพณีบุญเบิกบ้าน</h1>
+                <p>
+                  เป็นการทำบุญเพื่อชำระล้างสิ่งที่เป็นเสนียดจัญไร
+                  อันจะทำให้เกิดความเดือดร้อนแก่บ้านเมือง
+                  บ้านเมืองอยู่ไม่เป็นสุข
+                  ในบางครั้งก็ทำเมื่อฝนแล้งหรือไม่ตกต้องตามฤดูกาล
+                  โดยเชื่อกันว่าเมื่อทำแล้วจะทำให้ฝนตกและบ้านเมืองอยู่เย็นเป็นสุข
+                  เพื่อจะได้ทำนาและปลูกพืชพันธ์ธัญญาหารต่างๆ
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image-3">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block">
+                <h1 class="display-3">ประเพณีบุญข้าวประดับดิน</h1>
+                <p>
+                  “บุญเดือนเก้า ข้าวประดับดิน” หรือ “บุญข้าวประดับดิน”
+                  เป็นประเพณีหนึ่งในฮีตสิบสอง ของชาวอีสาน
+                  เพื่ออุทิศบุญกุศลให้กับผู้ล่วงลับไปแล้ว นิยมทำกันในวันแรม 14
+                  ค่ำ เดือนเก้า หรือที่เรียกว่า บุญเดือนเก้า บุญข้าวประดับดิน
+                  เป็นบุญที่ทำเพื่ออุทิศส่วนกุศลให้แก่ เปรต
+                  (ชาวอีสานบางถิ่นเรียก เผต) หรือญาติมิตรที่ตายไปแล้ว
+                  ข้าวประดับดิน ได้แก่ ข้าวและอาหารคาวหวาน พร้อมหมากพลู
+                  บุหรี่ที่ห่อด้วยใบตอง กล้วย นำไปวางไว้ตามใต้ต้นไม้
+                  แขวนไว้ตามกิ่งไม้ ตามบริเวณกำแพงวัดบ้าง
+                  (คนอีสานโบราณเรียกกำแพงวัดว่า ต้ายวัด) หรือวางไว้ตามพื้นดิน
+                  เรียกว่า "ห่อข้าวน้อย" พร้อมกับเชิญวิญญาณของญาติมิตร
+                  นำภัตตาหารไปถวายแด่พระภิกษุ สามเณร แล้วอุทิศส่วนกุศลแก่ผู้ตาย
+                  โดยหยาดน้ำ (กรวดน้ำ) ไปให้ด้วย
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#mySlider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          data-bs-target="#mySlider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- *** ตำบลบ้านค้อ *** -->
+    <section id="info" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-book fa-3x mb-2"></i>
+            <h3>ประวัติความเป็นมา</h3>
+            <p>
+              โดยแต่เดิมตำบลบ้านค้อจะขึ้นกับตำบลบ้านผือ อำเภอบ้านผือ
+              จังหวัดอุดรธานี ได้แยกตัวออกจากตำบลบ้านผือ
+              และได้จัดตั้งเป็นองค์การบริหารส่วนตำบลบ้านค้อ ในวันที่ 25 มีนาคม
+              พ.ศ. 2539 และตั้งที่ทำการที่บ้านค้อ หมู่ 1 ขึ้น
+              ต่อมาได้ยกฐานะเป็นองค์การบริหารส่วนตำบลขนาดกลางเมื่อวันที่ 25 มีนาคม
+              พ.ศ. 2553 และต่อมาเมื่อวันที่ 7 เมษายน พ.ศ. 2555
+              องค์การบริหารส่วนตำบลบ้านค้อได้ย้ายที่ทำการมาที่ใหม่ตรงบริเวณสามแยกระหว่างทางไปบ้านนาคูณและบ้านหนองกอง
+              (เป็นหนึ่งในหมู่บ้านของตำบลบ้านค้อในปัจจุบัน)
+            </p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-book-reader fa-3x mb-2"></i>
+            <h3>เกี่ยวกับตำบล</h3>
+            <p>
+              ตำบลบ้านค้อ เป็นตำบลขนาดเล็ก ประกอบด้วยหมู่บ้านทั้งหมด 6 หมู่บ้านได้แก่ บ้านค้อ
+              บ้านหนองกอง บ้านนารายณ์ บ้านนาคูณ บ้านน้อยนารายณ์ และบ้านค้อน้อย
+              จากข้อมูลของสำนักทะเบียนราษฎร์อำเภอบ้านผือ ณ กันยายน 2559
+              พบว่าตำบลบ้านค้อ มีจำนวนประชากร ทั้งสิ้น 3,137 คน แยกเป็นชาย 1,604
+              คน หญิง 1,533 คน มีจำนวนครัวเรือนทั้งสิ้น 947 ครัวเรือน
+            </p>
+          </div>
+
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-users fa-3x mb-2"></i>
+            <h3>ศาสนา ประเพณี วัฒนธรรม</h3>
+            <p>
+              ในตำบลบ้านค้อได้สืบสาน ศาสนา ประเพณี
+              และวัฒนธรรมส่วนใหญ่มากจากไทยพวน
+              เนื่องจากเป็นตำบลขนาดเล็ก ผู้คนทั้งหมดตำบลเลยนับถือพุทธศาสนา โดยมีวัดในถึงตำบล 8 แห่ง 
+              ผู้คนส่วนใหญ่ในตำบลจะมีกิจกรรมร่วมกันทางวัดอยู่ตลอดทั้งปี พร้อมกับทรงเสริมให้บุตรหลานบวรเรียน 
+              หรือบวรภาคฤดูร้อนในช่วงปิดเทอมอยู่ตลอด 
+              ภาษาที่ใช้ในถิ่นจะเป็นภาษาไทยพวนและภาษาอีสานปะปนกันไป
+              ภูมิปัญญาท้องถิ่นที่สืบทอดกันมาได้แก่ ไม้ไผ่จักสาน บั้งไฟ
+              ในทุกๆปีจะมีงานประจำปี ได้แก่ บุญปีใหม่ บุญมหาชาติ ประเพณีสงกรานต์
+              บุญบั้งไฟ ประเพณีเข้าพรรษา บุญเข้าประดับดิน บุญสารไทย
+              ประเพณีออกพรรษา และประเพณีบุญทอดกฐิน
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- *** ประเพณีในตำบล *** -->
+    <section id="festival" class="py-5">
+      <div class="container">
+        <div class="row g-3 mb-5">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/บุญข้าวประดับดิน.png"
+                alt="บุญข้าวประดับดิน"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">บุญข้าวประดับดิน</h5>
+                <p>
+                  “บุญเดือนเก้า ข้าวประดับดิน” หรือ “บุญข้าวประดับดิน”
+                  เป็นประเพณีหนึ่งในฮีตสิบสอง ของชาวอีสาน
+                  เพื่ออุทิศบุญกุศลให้กับผู้ล่วงลับไปแล้ว นิยมทำกันในวันแรม 14
+                  ค่ำ เดือนเก้า หรือที่เรียกว่า บุญเดือนเก้า บุญข้าวประดับดิน
+                  เป็นบุญที่ทำเพื่ออุทิศส่วนกุศลให้แก่ เปรต
+                  (ชาวอีสานบางถิ่นเรียก เผต) หรือญาติมิตรที่ตายไปแล้ว
+                  ข้าวประดับดิน ได้แก่ ข้าวและอาหารคาวหวาน พร้อมหมากพลู
+                  บุหรี่ที่ห่อด้วยใบตอง กล้วย นำไปวางไว้ตามใต้ต้นไม้
+                  แขวนไว้ตามกิ่งไม้ ตามบริเวณกำแพงวัดบ้าง
+                  (คนอีสานโบราณเรียกกำแพงวัดว่า ต้ายวัด) หรือวางไว้ตามพื้นดิน
+                  เรียกว่า "ห่อข้าวน้อย" พร้อมกับเชิญวิญญาณของญาติมิตร
+                  นำภัตตาหารไปถวายแด่พระภิกษุ สามเณร แล้วอุทิศส่วนกุศลแก่ผู้ตาย
+                  โดยหยาดน้ำ (กรวดน้ำ) ไปให้ด้วย
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/เทศการปีใหม่_ตักบาตรเทโว.png"
+                alt="ตักบาตรเทโว"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">ตักบาตรเทโว</h5>
+                <p>
+                  ตักบาตรเทโว หรือเรียกว่า การตักบาตรเทโวโรหณะ ซึ่งคำว่า "เทโว”
+                  ย่อมาจาก "เทโวโรหณะ” แปลว่า การเสด็จจากเทวโลก
+                  การตักบาตรเทโวจึงเป็นการระลึกถึงวันที่พระพุทธองค์เสด็จกลับจากการโปรดพระพุทธมารดาในเทวโลก
+                  ประเพณีการทำบุญกุศลเนื่องในวันออกพรรษานี้ ทุกวัดในประเทศไทย
+                  ก็จะมีการจดพิธีการตักบาตรเทโวนี้
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/วันสงการนต์.png"
+                alt="วันสงการนต์"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">สรงน้ำพระ</h5>
+                <p>
+                  การสรงน้ำพระ คือ การทำความสะอาดพระพุทธรูป หิ้งพระ รูปภาพ
+                  และสิ่งของต่าง ๆ
+                  รวมไปถึงที่ประดิษฐานขององค์พระพุทธรูปให้สะอาดบริสุทธิ์
+                  หรือเรียกอีกอย่างว่า “การถวายเครื่องเถราภิเษก”
+                  ซึ่งเป็นพิธีกรรมที่มีมาตั้งแต่สมัยพุทธกาลและสืบเนื่องต่อมาจนถึงปัจจุบันและต้องทำเป็นประจำทุกปี
+                  ถือว่าเป็นการชำระพระวรกายของพระพุทธเจ้าให้ปราศจากมลทิน
+                  เพื่อให้เกิดมุทิตาจิต เบิกบานใจ สุขใจ
+                  และเกิดความเป็นสิริมงคลกับผู้ที่ปฏิบัติและทุกคนในบ้าน
+                  นอกจากนี้ยังเป็นการแสดงถึงความเคารพและเลื่อมใสศรัทธาต่อพระรัตนตรัยทั้ง
+                  3 ประการอีกด้วย
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 mb-5">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/บุญพะเวด.png"
+                alt="บุญผะเหวด "
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">บุญผะเหวด </h5>
+                <p>
+                  บุญผะเหวด หรือบุญพระเวส หมายถึง บุญพระเวสสันดร
+                  เรียกอีกอย่างหนึ่งว่า บุญมหาชาติ
+                  ชาวอีสานจะนิยมจัดขึ้นในเดือนสี่ (ช่วงเดือนมีนาคม)
+                  เป็นบุญประจำปีในฮีตสิบสอง ดังที่ปราชญ์อีสานได้ประพันธ์ผญา
+                  (บทกลอน) เกี่ยวกับการทำบุญในช่วงเดือนสามและเดือนสี่ไว้ว่า
+                  “เถิงเมื่อเดือนสามค้อยเจ้าหัวคอยปั้นข้าวจี่
+                  ตกเมื่อเดือนสี่ค้อยจัวน้อยเทศน์มัทรี” แปลว่า
+                  เมื่อถึงเดือนสามพระภิกษุสามเณรจะรอชาวบ้านทำบุญข้าวจี่
+                  และเมื่อถึงเดือนสี่(ช่วงเดือนมีนาคม)
+                  สามเณรเทศน์กัณฑ์มัทรีในงานบุญมหาชาติ
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/บุญเบิกบ้าน.png"
+                alt="บุญเบิกบ้าน"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">บุญเบิกบ้าน</h5>
+                <p>
+                  เป็นการทำบุญเพื่อชำระล้างสิ่งที่เป็นเสนียดจัญไร
+                  อันจะทำให้เกิดความเดือดร้อนแก่บ้านเมือง
+                  บ้านเมืองอยู่ไม่เป็นสุข
+                  ในบางครั้งก็ทำเมื่อฝนแล้งหรือไม่ตกต้องตามฤดูกาล
+                  โดยเชื่อกันว่าเมื่อทำแล้วจะทำให้ฝนตกและบ้านเมืองอยู่เย็นเป็นสุข
+                  เพื่อจะได้ทำนาและปลูกพืชพันธ์ธัญญาหารต่างๆ
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img
+                src="data/pic/festival_re-size/เถราภิเษก.png"
+                alt="เถราภิเษก"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">เถราภิเษก</h5>
+                <p>
+                  พิธี “ฮดสรง” คือพิธีสรงน้ำหรือรินน้ำแก่พระสงฆ์
+                  ซึ่งเป็นรูปแบบประเพณีที่เก่าแก่ของผู้คนในแถบอีสาน
+                  โดยได้รับอิทธิพลมาจากอาณาจักรล้านช้าง
+                  การจัดพิธีฮดสรงนั้นจะถูกจัดขึ้นเมื่อชาวบ้านและพระเถระในคณะสงฆ์เห็นว่า
+                  มีพระสงฆ์ที่เล่าเรียนจบในบั้นหรือขั้นต่างๆ แล้ว
+                  จึงสมควรที่จะจัดพิธีฮดสรงให้
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- *** about *** -->
+    <section id="about" class="p-5">
+      <div class="dark-overlay">
+        <div class="row">
+          <div class="col">
+            <div class="container pt-4">
+              <h1>เกี่ยวกับเรา</h1>
+              <p>
+                นายวชิระ ทองเลิศ 64040249107 นักศึกษาชั้นปีที่ 1
+                มหาวิทยาลัยราชภัฎอุดรธานี เป็นผู้จัดทำเว็บไชต์ "เที่ยวบ้านฉัน
+                ตำบลบ้านค้อ" นี้ขึ้นเพื่อเป็นโปรเจคในรายวิชา CS34205
+                การเขียนโปรแกรมบนเว็บ <br />
+                ภาคเรียนที่ 1 ปีการศึกษา 2564 เพื่อเสนออาจารย์ภาณุพันธุ์ ชื่นบุญ
+                และเพื่อประโยชน์ในการศึกษาถึงวิธีการและการปฏิบัติจริงในการสร้างเว็บไชต์ขึ้น
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- *** Footer *** -->
+    <footer class="text-center p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>No Copyright &copy; Wachira Thonglert 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">เข้าสู่ระบบ</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></buttonผ>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label>ผู้ใช้</label>
+                <input
+                  type="text"
+                  placeholder="ป้อนชื่อผู้ใช้"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label>รหัสผ่าน</label>
+                <input
+                  type="password"
+                  placeholder="ป้อนรหัสผ่าน"
+                  class="form-control"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              ยกเลิก
+            </button>
+            <button class="btn btn-success">เข้าสู่ระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
