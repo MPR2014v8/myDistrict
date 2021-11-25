@@ -58,13 +58,13 @@
               <a href="#info" class="nav-link">ตำบลบ้านค้อ</a>
             </li>
             <li class="nav-item">
-              <a href="#product" class="nav-link">สถานที่ท่องเที่ยว</a>
+              <a href="attraction_page.php" class="nav-link">สถานที่ท่องเที่ยว</a> 
             </li>
             <li class="nav-item">
-              <a href="#attraction" class="nav-link">ที่พัก</a>
+              <a href="hotel_page.php" class="nav-link">ที่พัก</a>
             </li>
             <li class="nav-item">
-              <a href="#hostel" class="nav-link">สินค้า</a>
+              <a href="product_page.php" class="nav-link">สินค้า</a> 
             </li>
             <li class="nav-item">
               <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
@@ -87,21 +87,31 @@
      -->
     <section id="slider">
       <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+
         <!-- ปุ่ม slider -->
         <ol class="carousel-indicators">
-          <button
-            data-bs-target="#mySlider"
-            data-bs-slide-to="0"
-            class="active"
-          ></button>
+          <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
           <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
           <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
         </ol>
+
         <div class="carousel-inner">
+          <!-- เริ่ม loop สร้าง slider -->
+          <!-- 
+            ใช้ style inline เพิ่มรูปภาพเอาเอง 
+            .carousel-image-1 {
+              background-image: url("data/pic/festival/สงกราน.jpg");
+              background-size: cover;
+            }
+          -->
+
+          <!-- img silder -->
           <div class="carousel-item carousel-image-1 active">
             <div class="container">
               <div class="carousel-caption d-none d-sm-block">
+                <!-- title slider -->
                 <h1 class="display-3">ประเพณีวันสงกรานต์</h1>
+                <!-- detail slider -->
                 <p>
                   การสรงน้ำพระ คือ การทำความสะอาดพระพุทธรูป หิ้งพระ รูปภาพ
                   และสิ่งของต่าง ๆ
@@ -117,6 +127,7 @@
               </div>
             </div>
           </div>
+
           <div class="carousel-item carousel-image-2">
             <div class="container">
               <div class="carousel-caption d-none d-sm-block">
@@ -132,6 +143,7 @@
               </div>
             </div>
           </div>
+
           <div class="carousel-item carousel-image-3">
             <div class="container">
               <div class="carousel-caption d-none d-sm-block">
@@ -154,7 +166,10 @@
               </div>
             </div>
           </div>
+
         </div>
+
+        <!-- btn prev and next -->
         <button
           class="carousel-control-prev"
           data-bs-target="#mySlider"
