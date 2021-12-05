@@ -25,17 +25,17 @@
   <!-- *** สร้างเมนู *** -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a href="index.html" class="navbar-brand">เที่ยวบ้านฉัน ตำบลบ้านค้อ</a>
+      <a href="index.php" class="navbar-brand">เที่ยวบ้านฉัน ตำบลบ้านค้อ</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbar1" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">หน้าแรก</a>
+            <a href="index.php" class="nav-link">หน้าแรก</a>
           </li>
           <li class="nav-item">
-            <a href="index.html#info" class="nav-link">ตำบลบ้านค้อ</a>
+            <a href="index.php#info" class="nav-link">ตำบลบ้านค้อ</a>
           </li>
           <li class="nav-item">
             <a href="attraction_page.php" class="nav-link">สถานที่ท่องเที่ยว</a>
@@ -56,21 +56,20 @@
       </div>
     </div>
   </nav>
-
+  <!-- GROUP BY -->
 
   <!-- *** load data from db *** -->
-  <?php
-  require("connectdb.php");
-  $sql = "
-  SELECT p.name as 'name_place', lat, lng, v.name as 'name_village', sd.name as 'name_sub_dis', link FROM picofplace as picp INNER JOIN place as p on picp.id_pln = p.id INNER JOIN village as v on p.id_vill = v.id INNER JOIN sub_district as sd on v.id_dis = sd.id WHERE p.id_ctgry = 2 OR p.id_ctgry = 3;
-  ";
+  <section id="festival" class="py-5">
+    <?php
+    require("connectdb.php");
+    $sql = "
+    SELECT p.id as 'p_id', p.name as 'name_place', lat, lng, v.name as 'name_village', sd.name as 'name_sub_dis', link FROM picofplace as picp INNER JOIN place as p on picp.id_pln = p.id INNER JOIN village as v on p.id_vill = v.id INNER JOIN sub_district as sd on v.id_dis = sd.id WHERE p.id_ctgry = 2 OR p.id_ctgry = 3 GROUP BY p.id;
+    ";
 
-  $objQuery = mysqli_query($conn, $sql) or die("Error Query [" . $sql . "]");
-  ?>
+    $objQuery = mysqli_query($conn, $sql) or die("Error Query [" . $sql . "]");
+    ?>
 
-<section id="festival" class="py-5">
-  <div class="container">
-    
+    <div class="container">
       <!-- *** search *** -->
       <div class="row justify-content-center">
         <div class="col-sm-4 col-md-6">
@@ -88,6 +87,7 @@
         </div>
       </div>
 
+      <!-- card สถานที่ท่องเที่ยว -->
       <div class="row my-4">
         <?php
         //  output ข้อมูลในตาราง
@@ -121,35 +121,35 @@
                   <iframe class="mt-4" width="100%" height="300px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBOtQTtAbg0Rfl7RQ1WPjEjPw6Pg5pu9TA&q=<?php echo $str; ?>&center=<?php echo $objResult["lat"]; ?> ,<?php echo $objResult["lng"]; ?>" allowfullscreen>
                   </iframe>
                 </p>
-
+                <a href="place_detail_page.php?p_id=<?php echo $objResult['p_id'] ?>" class="btn btn-primary">ดูเพิ่มเติม</a>
               </div>
 
             </div>
           </div>
         <?php
         }
-        mysqli_close($conn);
         ?>
       </div>
 
     </div>
   </section>
 
-
   <!-- *** about *** -->
   <section id="about" class="p-5">
+    <?php
+    $sql = "
+        SELECT * FROM `homepage`;
+      ";
+    $objQuery = mysqli_query($conn, $sql) or die("Error Query [" . $sql . "]");
+    $objResult = mysqli_fetch_array($objQuery);
+    ?>
     <div class="dark-overlay">
       <div class="row">
         <div class="col">
           <div class="container pt-4">
             <h1>เกี่ยวกับเรา</h1>
             <p>
-              นายวชิระ ทองเลิศ 64040249107 นักศึกษาชั้นปีที่ 1
-              มหาวิทยาลัยราชภัฎอุดรธานี เป็นผู้จัดทำเว็บไชต์ "เที่ยวบ้านฉัน
-              ตำบลบ้านค้อ" นี้ขึ้นเพื่อเป็นโปรเจคในรายวิชา CS34205
-              การเขียนโปรแกรมบนเว็บ <br />
-              ภาคเรียนที่ 1 ปีการศึกษา 2564 เพื่อเสนออาจารย์ภาณุพันธุ์ ชื่นบุญ
-              และเพื่อประโยชน์ในการศึกษาถึงวิธีการและการปฏิบัติจริงในการสร้างเว็บไชต์ขึ้น
+              <?php echo $objResult['about_web']; ?>
             </p>
           </div>
         </div>
@@ -157,7 +157,7 @@
     </div>
   </section>
 
-
+  <?php mysqli_close($conn); ?>
   <!-- *** Footer *** -->
   <footer class="text-center p-4">
     <div class="container">
@@ -168,6 +168,36 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Login -->
+  <form action="admin/index.php">
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">เข้าสู่ระบบ</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></buttonผ>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>ผู้ใช้</label>
+              <input type="text" placeholder="ป้อนชื่อผู้ใช้" class="form-control" name="username" require />
+            </div>
+            <div class="form-group">
+              <label>รหัสผ่าน</label>
+              <input type="password" placeholder="ป้อนรหัสผ่าน" class="form-control" name="password" require />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              ยกเลิก
+            </button>
+            <button class="btn btn-success" name="login_user" type="submit">เข้าสู่ระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 
 </body>
 
